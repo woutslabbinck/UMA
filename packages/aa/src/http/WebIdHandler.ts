@@ -1,5 +1,5 @@
 import {getLoggerFor, Logger, RoutePath} from '@thundr-be/sai-helpers';
-import {HttpHandler, HttpHandlerContext, HttpHandlerResponse} from '@digita-ai/handlersjs-http';
+import {HttpHandler, HttpHandlerContext, HttpHandlerResponse} from '@useid/handlersjs-http';
 import {Observable, of} from 'rxjs';
 /**
  * Default route serving WebIDs

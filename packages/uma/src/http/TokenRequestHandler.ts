@@ -1,6 +1,6 @@
-import {UnsupportedMediaTypeHttpError} from '@digita-ai/handlersjs-http';
-import {BadRequestHttpError} from '@digita-ai/handlersjs-http';
-import {HttpHandler, HttpHandlerContext, HttpHandlerResponse} from '@digita-ai/handlersjs-http';
+import {UnsupportedMediaTypeHttpError} from '@useid/handlersjs-http';
+import {BadRequestHttpError} from '@useid/handlersjs-http';
+import {HttpHandler, HttpHandlerContext, HttpHandlerResponse} from '@useid/handlersjs-http';
 import {throwError} from 'rxjs';
 import {from, map, Observable} from 'rxjs';
 import {GrantTypeProcessor} from '../grant/GrantTypeProcessor';

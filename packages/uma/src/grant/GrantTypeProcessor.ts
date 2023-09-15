@@ -1,4 +1,4 @@
-import {HttpHandlerContext} from '@digita-ai/handlersjs-http';
+import {HttpHandlerContext} from '@useid/handlersjs-http';
 
 export interface TokenResponse {
     access_token: string,

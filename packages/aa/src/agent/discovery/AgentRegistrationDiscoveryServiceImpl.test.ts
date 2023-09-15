@@ -1,4 +1,4 @@
-import {NotFoundHttpError, NotImplementedHttpError, UnauthorizedHttpError} from '@digita-ai/handlersjs-http';
+import {NotFoundHttpError, NotImplementedHttpError, UnauthorizedHttpError} from '@useid/handlersjs-http';
 import {ClientIdStrategy} from '../../factory/ClientIdStrategy';
 import {AgentRegistrationDiscoveryService} from './AgentRegistrationDiscoveryService';
 import {AgentRegistrationDiscoveryServiceImpl} from './AgentRegistrationDiscoveryServiceImpl';

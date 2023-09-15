@@ -1,4 +1,4 @@
-import {BadRequestHttpError, HttpHandlerContext} from '@digita-ai/handlersjs-http';
+import {BadRequestHttpError, HttpHandlerContext} from '@useid/handlersjs-http';
 import {NeedInfoError} from '../error/NeedInfoError';
 import {RequestDeniedError} from '../error/RequestDeniedError';
 import {AccessMode} from '@thundr-be/sai-helpers';

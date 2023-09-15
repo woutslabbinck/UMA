@@ -1,6 +1,6 @@
 import {UmaConfigRequestHandler} from './UmaConfigRequestHandler';
 import {lastValueFrom} from 'rxjs';
-import {HttpHandlerContext} from '@digita-ai/handlersjs-http';
+import {HttpHandlerContext} from '@useid/handlersjs-http';
 
 const BASE_URL = 'https://example.org';
 

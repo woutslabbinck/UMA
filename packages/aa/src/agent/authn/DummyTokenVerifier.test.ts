@@ -1,4 +1,4 @@
-import {UnauthorizedHttpError} from '@digita-ai/handlersjs-http';
+import {UnauthorizedHttpError} from '@useid/handlersjs-http';
 import {DummyTokenVerifier} from './DummyTokenVerifier';
 
 const MOCK_URL = 'https://example.org/token';

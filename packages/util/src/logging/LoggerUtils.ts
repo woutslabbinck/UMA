@@ -1,7 +1,6 @@
-import {LoggerLevel, Logger as HandlerLogger} from '@digita-ai/handlersjs-logging';
-import {WinstonLoggerFactory} from './WinstonLoggerFactory';
+import {LoggerLevel, Logger as HandlerLogger} from '@useid/handlersjs-logging';
+import {WinstonLogger} from './WinstonLogger';
 
-const loggerFactory = new WinstonLoggerFactory();
 const loggerLevel = LoggerLevel.debug;
 const loggerMinimumPrintLevel = LoggerLevel.debug;
 
@@ -16,6 +15,6 @@ export type Logger = HandlerLogger;
 export const getLoggerFor = (
     loggable: string | { constructor: { name: string } },
 ): Logger => {
-  return loggerFactory.createLogger(typeof loggable === 'string' ? loggable : loggable.constructor.name,
-      loggerLevel, loggerMinimumPrintLevel);
+    return new WinstonLogger(typeof loggable === 'string' ? loggable : loggable.constructor.name,
+    loggerLevel, loggerMinimumPrintLevel);
 };

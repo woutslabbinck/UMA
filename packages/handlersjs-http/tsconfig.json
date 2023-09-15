@@ -1,0 +1,18 @@
+{
+  "extends": "@useid/typescript-config/tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": "./lib",
+    "outDir": "./dist",
+    "module": "commonjs",
+    //
+    "types": []
+  },
+  "include": [
+    "lib"
+  ],
+  "exclude": [
+    "dist",
+    "node_modules",
+    "**/*.spec.ts"
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "name": "@useid/handlersjs-http",
+  "version": "0.21.0",
+  "description": "",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "require": "./dist/index.js"
+    }
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    ".componentsignore",
+    "dist",
+    "config"
+  ],
+  "scripts": {
+    "start": "echo 'disabled following command: `node dist/main.js`'",
+    "add": "cd ../.. && npx lerna --scope @useid/handlersjs-http add",
+    "build": "rimraf ./dist && npm run build:ts && npm run build:components",
+    "build:ts": "tsc",
+    "build:components": "componentsjs-generator -s lib -c dist/components -i .componentsignore --lenient",
+    "prepare": "npm run build",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "lint:staged": "lint-staged",
+    "test": "jest",
+    "test:ci": "jest --silent --runInBand --passWithNoTests",
+    "posttest": "jest-coverage-thresholds-bumper --silent --coverage-summary-path coverage-summary.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com/useid/handlersjs.git",
+    "directory": "packages/handlersjs-http"
+  },
+  "author": "Wouter Janssens",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^29.5.2",
+    "@types/n3": "1.10.0",
+    "@types/node": "^18.0.0",
+    "@types/node-fetch": "^2.5.11",
+    "@types/uuid": "^9.0.1",
+    "@useid/typescript-config": "^0.8.1",
+    "componentsjs": "^5.2.0",
+    "componentsjs-generator": "3.0.3",
+    "eslint": "^8.10.0",
+    "jest": "^29.5.0",
+    "jest-coverage-thresholds-bumper": "^1.0.1",
+    "jest-date-mock": "^1.0.8",
+    "lint-staged": "^12.0.2",
+    "mock-http": "^1.1.0",
+    "rimraf": "^2.7.1",
+    "ts-node": "^9.1.1",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "@useid/handlersjs-core": "0.21.0",
+    "@useid/handlersjs-logging": "0.21.0",
+    "@useid/handlersjs-storage": "0.21.0",
+    "node-fetch": "^2.6.1",
+    "rxjs": "^7.5.7",
+    "uuid": "^9.0.0",
+    "clone": "^2.1.2"
+  },
+  "lsd:module": "https://linkedsoftwaredependencies.org/bundles/npm/@useid/handlersjs-http",
+  "lsd:components": "dist/components/components.jsonld",
+  "lsd:contexts": {
+    "https://linkedsoftwaredependencies.org/bundles/npm/@useid/handlersjs-http/^0.0.0/components/context.jsonld": "dist/components/context.jsonld"
+  },
+  "lsd:importPaths": {
+    "https://linkedsoftwaredependencies.org/bundles/npm/@useid/handlersjs-http/^0.0.0/components/": "dist/components/",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@useid/handlersjs-http/^0.0.0/config/": "config/",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@useid/handlersjs-http/^0.0.0/dist/": "dist/"
+  },
+  "jest": {
+    "preset": "@useid/jest-config",
+    "displayName": "http",
+    "setupFiles": [
+      "<rootDir>/test/setup.ts"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "statements": 99.79,
+        "branches": 99.11,
+        "functions": 99.15,
+        "lines": 100
+      }
+    },
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/dist/",
+      "<rootDir>/coverage/",
+      "<rootDir>/node_modules/",
+      "<rootDir>/.*\\.conf(ig)?.ts",
+      "<rootDir>/lib/index.ts",
+      "<rootDir>/lib/main.ts"
+    ]
+  }
+}

@@ -1,4 +1,4 @@
-import {NotFoundHttpError, NotImplementedHttpError, UnauthorizedHttpError} from '@digita-ai/handlersjs-http';
+import {NotFoundHttpError, NotImplementedHttpError, UnauthorizedHttpError} from '@useid/handlersjs-http';
 import {AuthorizationAgent} from '@janeirodigital/interop-authorization-agent';
 import {getLoggerFor, Logger} from '@thundr-be/sai-helpers';
 import LRUCache from 'lru-cache';

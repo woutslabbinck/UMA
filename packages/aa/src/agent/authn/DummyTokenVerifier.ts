@@ -1,6 +1,6 @@
 import {Logger, getLoggerFor} from '@thundr-be/sai-helpers';
 import {AuthenticationRequest, AuthenticationResult, TokenVerifier} from './TokenVerifier';
-import {UnauthorizedHttpError} from '@digita-ai/handlersjs-http';
+import {UnauthorizedHttpError} from '@useid/handlersjs-http';
 
 /**
  * A dummy claim token processor for debugging purposes

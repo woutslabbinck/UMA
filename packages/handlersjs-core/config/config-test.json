@@ -1,0 +1,14 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@useid/handlersjs-core/^0.0.0/components/context.jsonld"
+  ],
+  "import": [],
+  "@graph": [
+    {
+      "@id": "urn:handlersjs-core:test:ConsoleLogger",
+      "@type": "ConsoleLogger",
+      "minimumLevel": 6,
+      "minimumLevelPrintData": 6
+    }
+  ]
+}

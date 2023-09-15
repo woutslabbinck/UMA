@@ -21,12 +21,12 @@ export class InteropFetchFactory extends FetchFactory {
      * @param {string} clientId
      * @return {FetchType}
      */
-  getAuthenticatedFetch(clientId: string): (input: RequestInfo, init?: RequestInit) => Promise<Response> {
+  getAuthenticatedFetch(clientId: string): (input: RequestInfo | URL, init?: RequestInit) => Promise<Response> {
     const tokenFactory = this.tokenFactory;
     const logger = this.logger;
     return async function fetchBoundToUMA(
-        url: RequestInfo,
-        init?: RequestInit,
+      url: RequestInfo | URL,
+      init?: RequestInit,
     ): Promise<Response> {
       const token = await tokenFactory.getToken(url.toString(), (init && init!.method) ? init.method : 'GET',
           {webid: `${clientId}/profile`, azp: `${clientId}/profile`});

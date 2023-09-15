@@ -1,4 +1,4 @@
-import {BadRequestHttpError} from '@digita-ai/handlersjs-http';
+import {BadRequestHttpError} from '@useid/handlersjs-http';
 import {Logger, getLoggerFor} from '@thundr-be/sai-helpers';
 import {createLocalJWKSet, jwtVerify, SignJWT} from 'jose';
 import {v4} from 'uuid';

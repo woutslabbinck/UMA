@@ -1,4 +1,4 @@
-import {HttpHandlerResponse, HttpHandlerContext} from '@digita-ai/handlersjs-http';
+import {HttpHandlerResponse, HttpHandlerContext} from '@useid/handlersjs-http';
 import {lastValueFrom, of, throwError} from 'rxjs';
 import {JsonHttpErrorHandler} from './ErrorHandler';
 

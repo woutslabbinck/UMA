@@ -3,7 +3,7 @@
 
 import * as util from 'util';
 import {transports, createLogger, format, Logger as WLogger} from 'winston';
-import {Logger, LoggerLevel} from '@digita-ai/handlersjs-logging';
+import {Logger, LoggerLevel} from '@useid/handlersjs-logging';
 import {TransformableInfo} from 'logform';
 import * as fs from 'fs';
 
@@ -16,7 +16,7 @@ export class WinstonLogger extends Logger {
   private logger: WLogger;
 
   constructor(
-    protected readonly label: string,
+    public readonly label: string,
     protected readonly minimumLevel: LoggerLevel,
     protected readonly minimumLevelPrintData: LoggerLevel,
   ) {

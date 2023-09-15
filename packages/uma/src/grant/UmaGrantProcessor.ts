@@ -1,4 +1,4 @@
-import {BadRequestHttpError, HttpHandlerContext} from '@digita-ai/handlersjs-http';
+import {BadRequestHttpError, HttpHandlerContext} from '@useid/handlersjs-http';
 import {AccessMode} from '@thundr-be/sai-helpers';
 import {Authorizer, Principal, Authorization, Ticket} from '@thundr-be/sai-interfaces';
 import {ClaimTokenProcessor, ClaimTokenRequest} from '../authn/ClaimTokenProcessor';

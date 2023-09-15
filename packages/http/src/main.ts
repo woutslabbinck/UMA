@@ -1,6 +1,6 @@
 import * as path from 'path';
 import {ComponentsManager} from 'componentsjs';
-import {NodeHttpServer} from '@digita-ai/handlersjs-http';
+import {NodeHttpServer} from '@useid/handlersjs-http';
 import yargs from 'yargs';
 
 const argv = yargs(process.argv.slice(2)).options({

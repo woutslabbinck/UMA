@@ -1,6 +1,6 @@
 import {BadRequestHttpError, HttpHandler, HttpHandlerContext,
   HttpHandlerResponse, InternalServerError,
-  UnauthorizedHttpError, UnsupportedMediaTypeHttpError} from '@digita-ai/handlersjs-http';
+  UnauthorizedHttpError, UnsupportedMediaTypeHttpError} from '@useid/handlersjs-http';
 import {from, map, Observable, throwError} from 'rxjs';
 import * as jose from 'jose';
 import {TicketFactory} from '../ticket/TicketFactory';

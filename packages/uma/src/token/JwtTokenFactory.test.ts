@@ -3,7 +3,7 @@ import {TokenFactory} from './TokenFactory';
 import {JwtTokenFactory} from './JwtTokenFactory';
 import {AccessMode} from '@thundr-be/sai-helpers';
 import {decodeJwt, decodeProtectedHeader, generateKeyPair, JWTPayload, KeyLike, SignJWT} from 'jose';
-import {BadRequestHttpError} from '@digita-ai/handlersjs-http';
+import {BadRequestHttpError} from '@useid/handlersjs-http';
 import {v4} from 'uuid';
 
 const ISSUER = 'https://example.com';

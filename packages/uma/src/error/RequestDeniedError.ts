@@ -1,4 +1,4 @@
-import {ForbiddenHttpError} from '@digita-ai/handlersjs-http';
+import {ForbiddenHttpError} from '@useid/handlersjs-http';
 
 /**
  * The client is not authorized to have these permissions. The authorization

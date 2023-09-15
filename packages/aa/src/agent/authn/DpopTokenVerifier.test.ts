@@ -1,4 +1,4 @@
-import {UnauthorizedHttpError} from '@digita-ai/handlersjs-http';
+import {UnauthorizedHttpError} from '@useid/handlersjs-http';
 import {createSolidTokenVerifier} from '@solid/access-token-verifier';
 import {DpopTokenVerifier} from './DpopTokenVerifier';
 

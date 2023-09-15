@@ -1,4 +1,4 @@
-import {HttpHandlerContext} from '@digita-ai/handlersjs-http';
+import {HttpHandlerContext} from '@useid/handlersjs-http';
 import {lastValueFrom} from 'rxjs';
 import {DefaultRouteHandler} from './DefaultRouteHandler';
 

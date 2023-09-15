@@ -1,7 +1,7 @@
 /* eslint-disable require-jsdoc */
 import {AccountSettings, AccountStore, ExpiringStorage, KeyValueStorage} from '@solid/community-server';
 import assert from 'assert';
-import {hash, compare} from 'bcrypt';
+import {hash, compare} from 'bcryptjs';
 import {v4} from 'uuid';
 /**
  * A payload to persist a user account

@@ -1,6 +1,6 @@
 import {BadRequestHttpError, HttpHandlerContext,
   InternalServerError,
-  UnauthorizedHttpError, UnsupportedMediaTypeHttpError} from '@digita-ai/handlersjs-http';
+  UnauthorizedHttpError, UnsupportedMediaTypeHttpError} from '@useid/handlersjs-http';
 import {PermissionRegistrationHandler, RequestingPartyRegistration} from './PermissionRegistrationHandler';
 import * as jose from 'jose';
 import {lastValueFrom} from 'rxjs';

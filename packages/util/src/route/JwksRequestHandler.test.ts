@@ -1,7 +1,7 @@
 import {JwksRequestHandler} from './JwksRequestHandler';
 import {InMemoryJwksKeyHolder} from './../secrets/InMemoryJwksKeyHolder';
 import {lastValueFrom} from 'rxjs';
-import {HttpHandlerContext} from '@digita-ai/handlersjs-http';
+import {HttpHandlerContext} from '@useid/handlersjs-http';
 
 describe('Happy flows', () => {
   const keyHolder = new InMemoryJwksKeyHolder('ES256');

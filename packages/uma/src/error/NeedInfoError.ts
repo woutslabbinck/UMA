@@ -1,4 +1,4 @@
-import {ForbiddenHttpError} from '@digita-ai/handlersjs-http';
+import {ForbiddenHttpError} from '@useid/handlersjs-http';
 
 export type RedirectUserInfo = {
     redirect_user: string

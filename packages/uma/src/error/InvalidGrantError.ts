@@ -1,4 +1,4 @@
-import {BadRequestHttpError} from '@digita-ai/handlersjs-http';
+import {BadRequestHttpError} from '@useid/handlersjs-http';
 
 /**
  * If the provided permission ticket was not found at the authorization server,

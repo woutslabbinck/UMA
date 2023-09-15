@@ -6,7 +6,6 @@ export * from './error/ErrorHandler';
 
 export * from './logging/LoggerUtils';
 export * from './logging/WinstonLogger';
-export * from './logging/WinstonLoggerFactory';
 
 export * from './secrets/JwksKeyHolder';
 export * from './secrets/InMemoryJwksKeyHolder';

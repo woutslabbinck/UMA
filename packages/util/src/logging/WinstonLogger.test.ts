@@ -1,6 +1,6 @@
 import {Logger} from 'winston';
 import {mock} from 'jest-mock-extended';
-import {LoggerLevel} from '@digita-ai/handlersjs-logging';
+import {LoggerLevel} from '@useid/handlersjs-logging';
 import {WinstonLogger} from './WinstonLogger';
 
 let testLogger: Logger;

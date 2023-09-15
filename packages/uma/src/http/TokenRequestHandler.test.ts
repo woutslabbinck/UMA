@@ -1,6 +1,6 @@
 import {TokenRequestHandler} from './TokenRequestHandler';
 import {lastValueFrom} from 'rxjs';
-import {BadRequestHttpError, HttpHandlerContext, UnsupportedMediaTypeHttpError} from '@digita-ai/handlersjs-http';
+import {BadRequestHttpError, HttpHandlerContext, UnsupportedMediaTypeHttpError} from '@useid/handlersjs-http';
 
 describe('Happy flows', () => {
   let requestHandler: TokenRequestHandler;

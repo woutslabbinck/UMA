@@ -1,4 +1,4 @@
-import {HttpHandler, HttpHandlerContext, HttpHandlerResponse, UnauthorizedHttpError} from '@digita-ai/handlersjs-http';
+import {HttpHandler, HttpHandlerContext, HttpHandlerResponse, UnauthorizedHttpError} from '@useid/handlersjs-http';
 import {getLoggerFor, Logger} from '@thundr-be/sai-helpers';
 import {Observable, throwError, from, map} from 'rxjs';
 import {AgentRegistrationDiscoveryService} from '../agent/discovery/AgentRegistrationDiscoveryService';

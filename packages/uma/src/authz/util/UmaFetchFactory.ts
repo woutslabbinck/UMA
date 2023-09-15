@@ -17,11 +17,11 @@ export class UmaFetchFactory extends FetchFactory {
   /**
      * Returns an authenticated fetch for the client.
      */
-  getAuthenticatedFetch(clientId: string): (input: RequestInfo, init?: RequestInit) => Promise<Response> {
+  getAuthenticatedFetch(clientId: string): (input: RequestInfo | URL, init?: RequestInit) => Promise<Response> {
     const getJwtForRequest = this.getJwtForRequest.bind(this);
     const logger = this.logger;
     return async function fetchBoundToUMA(
-        url: RequestInfo,
+        url: RequestInfo | URL,
         init?: RequestInit,
     ): Promise<Response> {
       return fetch(url, {
@@ -43,7 +43,7 @@ export class UmaFetchFactory extends FetchFactory {
    * @param {RequestInfo} url
    * @return {Promise<string>}
    */
-  private async getJwtForRequest(url: RequestInfo): Promise<string> {
+  private async getJwtForRequest(url: RequestInfo | URL): Promise<string> {
     return (await this.tokenFactory.serialize({
       sub: {iri: url.toString()},
       modes: new Set([AccessMode.read]),
