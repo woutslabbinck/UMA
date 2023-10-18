@@ -29,7 +29,7 @@ export class AllAuthorizer extends Authorizer {
    * @return {Promise<Set<AccessMode>>} - granted access modes
    */
   public async authorize(client: Principal, request: Ticket): Promise<Set<AccessMode>> {
-    this.logger.debug(`Authorized request by ${client.webId} for ${request.sub.iri}`);
+    this.logger.info(`Authorized request by ${client.webId} for ${request.sub.iri} for access mode ${Object.values(request.requested).join(' ')} with owner ${request.owner}`);
     return new Set(this.accessModes);
   }
 }
