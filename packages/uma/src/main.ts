@@ -3,19 +3,21 @@ import {ComponentsManager} from 'componentsjs';
 import {NodeHttpServer} from '@useid/handlersjs-http';
 import {setLogger} from '@useid/handlersjs-logging'
 import {WinstonLogger} from '@thundr-be/sai-helpers'
-// import yargs from 'yargs';
+import yargs from 'yargs';
 
-// const argv = yargs(process.argv.slice(2)).options({
-//   config: {type: 'string'},
-//   host: {type: 'string', default: 'localhost'},
-//   protocol: {type: 'string', default: 'http'},
-//   mainModulePath: {type: 'string'},
-//   customConfigPath: {type: 'string'},
-// }).parseSync();
+const argv = yargs(process.argv.slice(2)).options({
+  config: {type: 'string'},
+  host: {type: 'string', default: 'localhost'},
+  protocol: {type: 'string', default: 'http'},
+  mainModulePath: {type: 'string'},
+  customConfigPath: {type: 'string'},
+}).parseSync();
 
 const umaPort = 4000;
-const protocol = "http"
-const host = "localhost"
+const protocol = argv.protocol
+const host = argv.host
+const config =argv.customConfigPath
+
 export const launch: () => Promise<void> =
 async () => {
   const variables: Record<string, any> = {};
@@ -25,14 +27,8 @@ async () => {
   variables['urn:authorization-service:variables:protocol'] = protocol;
   variables['urn:authorization-service:variables:baseUrl'] = `${protocol}://${host}:${umaPort}/uma`;
 
-//   variables['urn:authorization-agent:variables:port'] = aaPort;
-//   variables['urn:authorization-agent:variables:host'] = argv.host;
-//   variables['urn:authorization-agent:variables:protocol'] = argv.protocol;
-//   variables['urn:authorization-agent:variables:baseUrl'] = `${argv.protocol}://${argv.host}:${aaPort}/aa`;
-
   variables['urn:authorization-service:variables:mainModulePath'] =  path.join(__dirname, '../');
-  variables['urn:authorization-service:variables:customConfigPath'] = path.join(__dirname, '../config/debug.json'); // will return all access modes allways
-  // variables['urn:authorization-service:variables:customConfigPath'] = path.join(__dirname, '../config/default.json'); // follows Solid Application Interop spec
+  variables['urn:authorization-service:variables:customConfigPath'] = config; // will return all access modes allways
 
   const mainModulePath = variables['urn:authorization-service:variables:mainModulePath'];
 
@@ -50,10 +46,8 @@ async () => {
   const umaServer: NodeHttpServer = await
   manager.instantiate('urn:authorization-service:default:NodeHttpServer',
       {variables});
-//   const aaServer: NodeHttpServer = await manager.instantiate('urn:authorization-agent:default:NodeHttpServer',
-    //   {variables});
+
   umaServer.start();
-//   aaServer.start();
 };
 
 launch();

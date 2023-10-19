@@ -36,6 +36,26 @@ cd test-UMA-flow/
 npx ts-node index.ts
 ```
 
+### Experimental UCP UMA server
+
+Bootstrap (build) individually
+
+```sh
+npx lerna run boostrap --scope "@thundr-be/sai-uma"
+```
+
+Run the server individually: Note: this needs the uma complient css server running
+```sh
+# run the uma server
+cd packages/uma/
+node dist/main.js --customConfigPath /home/wouts/Documents/repos/UMA/packages/uma/config/experimental.json 
+```
+
+```sh
+#run the css server
+cd packages/css/
+node dist/server/main.js
+```
 ## Next steps
 
 I (Wout Slabbinck) will try to hack an Authorizer in the UMA AS (such as the current [AllAuthorizer](packages/uma/src/authz/AllAuthorizer.ts)) and include Koreografeye there for the research on Usage Control Patterns.

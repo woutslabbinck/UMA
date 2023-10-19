@@ -22,4 +22,5 @@ export * from './authn/BasicClaimTokenProcessor';
 
 // Authz
 export * from './authz/AllAuthorizer';
+export * from './authz/UcpPatternAuthorizer';
 export * from './authz/util/UmaFetchFactory';
